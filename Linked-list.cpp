@@ -17,8 +17,10 @@ class Linkedlist
        {
             head = NULL;
        }
-       void insertion_begin()
+       void insertion_begin(int data)
        {
+           Node* newNode = new Node();
+           newNode->data = data;
            if(head==NULL)
            {
               newNode->next=NULL;
@@ -43,10 +45,12 @@ class Linkedlist
 };
 int main()
 {
-    Node n;
     Linkedlist l;
-    l.insertion_begin();
+    l.insertion_begin(10);
+    l.insertion_begin(20);
+    l.insertion_begin(40);
+    
+    cout<<"Linked List:-"<<endl;
     l.display();
     return 0;
 }
-
