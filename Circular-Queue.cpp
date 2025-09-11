@@ -27,12 +27,13 @@ class q
            if(isFull())
            {
                cout<<"Queue is Full"<<endl;
+               return;
            }
            if(isEmpty())
            {
                F=0;
            }
-           R=(R+1)%n;
+           R = (R+1)%n;
            cout<<"Enter the item: "<<endl;
            cin>>item;
            Queue[R]=item;
@@ -43,9 +44,10 @@ class q
            if(isEmpty())
            {
                cout<<"Queue is Empty";
+               return;
            }
              item=Queue[F];
-             F=(F+1)%n;
+             F = (F+1)%n;
              cout<<"Dequeued: "<<item<<endl;
            if(F==R)
            {
