@@ -2,17 +2,22 @@
 using namespace std;
 class Stack
 {
-    int x,stac[20],top=-1;
+    int x,stac[20],top;
     public:
+     Stack()
+     {
+        top = -1;
+     }
       void push(int n)
       {
-        if(top>=x-1)
+        if(top>=x-1) 
         {
             cout<<"Stack is Overflow\n";
         }
         else
         {
           stac[++top]=n;
+          cout<< "Pushed: " << n << endl;
         }
       }
       void pop()
@@ -23,7 +28,8 @@ class Stack
         }
         else
         {
-          stac[top--];
+          cout<< "Popped Value: " << stac[top]<< endl;
+          top--;
         }
       }
       void peek()
@@ -48,9 +54,12 @@ class Stack
 int main()
 {
     Stack s;
+    s.push(20);
+    s.push(10);
+
     s.pop();
     cout<<"Popped from Stack\n";
-    cout<<"Top element is: ";
+    cout<<"Top element is: " << endl;
     s.peek();
     while(!s.isempty())
     {

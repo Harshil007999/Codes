@@ -10,7 +10,7 @@ class q
       int R=-1;
         void getdata()
         {
-            cout<<"Enter the Size: "<<endl;
+            cout<<"Enter the Size: ";
             cin>>n;
         }
         void ENqueue()
@@ -40,7 +40,7 @@ class q
             }
             else {
                 item=Queue[F];
-                cout<<"Deleted value is "<<Queue[F];
+                cout<<"Deleted value is " <<Queue[F];
                 F=F+1;
                 
             }
